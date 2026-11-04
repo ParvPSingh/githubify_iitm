@@ -16,7 +16,7 @@ the idea is worth a proper GPU study. It does not settle the question.
 | Teacher / "ground truth" | MACE-MP-0 *small* (float32), used for labels, for measuring true energy in MD, and as the conservative corrector in MTS |
 | Systems | bulk Si (64 atoms, PBC), liquid water (27 H₂O, 81 atoms, PBC), ethanol (9 atoms, gas phase) |
 | Data | Langevin MD with the teacher over a temperature ladder. **Pool**: 800 frames/system (Si 300–1200 K, water 250–400 K, ethanol 200–800 K). **Test**: 160 frames/system from an independent run at different temperatures. |
-| Student | PaiNN, 64 features, 3 interaction layers, 5 Å cutoff (~150k params). **Direct** force head (gated equivariant vector block) plus a per-atom energy head. Forces never use autograd. |
+| Student | PaiNN, 64 features, 3 interaction layers, 5 Å cutoff (~170k params). **Direct** force head (gated equivariant vector block) plus a per-atom energy head. Forces never use autograd. |
 | Arms | **scratch**; **JEPA** (EMA target encoder); **denoising** (Zaidi et al.-style noise prediction, σ = 0.05 Å) |
 | Pretraining | Whole unlabelled pool (2400 frames), 2000 steps, batch 8 |
 | Fine-tuning | 16 / 64 / 256 labelled frames per system, 1500 steps, batch 8, AdamW 1e-3 cosine, loss = F-MSE + 0.1·E-MSE, best checkpoint on a fixed 32-frame/system validation set. Same recipe for every arm. |
@@ -48,6 +48,75 @@ the idea is worth a proper GPU study. It does not settle the question.
    the outer step. We report drift vs. *k* ∈ {2, 4, 8, 16}. The teacher stands in for the
    conservative fine-tuned model that would play this role in practice.
 5. **Cost:** ms per force call, direct head vs. −∂E/∂R, same PaiNN, Si cells of 64–512 atoms.
+
+## Findings (single seed, so treat differences under ~5 % as noise)
+
+Full tables: [`results/summary.md`](results/summary.md). Figures: `results/figs/`.
+
+![force MAE vs labels](results/figs/force_mae_vs_labels.png)
+
+**1. Label efficiency: JEPA helps only in the lowest-data regime, and less than denoising.**
+
+| mean test force MAE (meV/Å) | 16 labels/system | 64 | 256 |
+|---|---|---|---|
+| scratch | 90.6 | 71.2 | 67.8 |
+| JEPA (EMA target) | 83.9 (−7 %) | 70.8 (≈0) | 68.9 (+2 %) |
+| denoising | **68.8 (−24 %)** | **58.3 (−18 %)** | **56.2 (−17 %)** |
+
+JEPA's gain at 16 labels comes from water and ethanol. On Si it does nothing, and by 64 labels
+it has vanished. Denoising wins on every system at every budget. This fits the concern from
+our earlier discussion: forces live in fine geometric detail, and denoising targets that detail
+directly (on near-equilibrium data the noise-prediction target ≈ a force field), while JEPA's
+latent prediction is free to discard it. Keeping vector targets in the JEPA loss did not close
+the gap.
+
+**2. Conservativeness: pretraining doesn't make direct forces "more conservative" beyond what
+better accuracy explains.** Jacobian asymmetry is small for all students (Si ≈ 0.016,
+water 0.024–0.053, ethanol 0.035–0.087; random ≈ 0.71). Its ranking tracks force MAE exactly
+(denoise < JEPA < scratch at 16 labels; near-identical at 256). No arm shows a curl reduction
+that its error doesn't account for.
+
+**3. NVE with direct forces alone is not usable for any arm** (confirms Bigi et al.). Drift is
+2–4 orders of magnitude above the conservative teacher: Si ≈ 0.6–1 meV/atom/ps vs 0.0007;
+ethanol 70–130 vs 0.02. Water *explodes* for scratch and JEPA within ~0.27 ps. Denoising
+survives the run but drifts at 340 meV/atom/ps. JEPA was not better than scratch on any system.
+
+**4. MTS rescues all arms equally; the stride ceiling is set by the integrator, not the student.**
+With a conservative correction every k = 2–4 steps, drift drops to 0.01–1 meV/atom/ps for every
+arm, with no consistent ranking between arms. Si (no H) stays stable up to k = 16 for all
+arms. Water and ethanol fail or drift strongly at k ≥ 8 for *every* arm, including the most
+accurate one. An outer step of k·dt = 4 fs is close to half the O–H/C–H stretch period, which is
+the classic r-RESPA resonance, so a better student would not raise this ceiling.
+
+**5. Cost.** On CPU the direct head is 1.9–2.6× cheaper than −∂E/∂R with the same PaiNN
+(64–512 atoms). JEPA pretraining cost ~2.2× more per step than denoising: an extra target
+forward pass plus the predictor.
+
+![MD](results/figs/md.png)
+
+### Verdict on the original idea
+
+In this pilot, JEPA pretraining is **not** a good route to better direct-force MLIPs. It gives a
+modest low-data gain that denoising beats at lower cost. It does not reduce non-conservativeness
+or NVE drift. The things that actually made direct-force MD work here were the known ones:
+a better-fitting student (denoising) and MTS with a conservative corrector.
+
+If you want to keep pushing JEPA, the experiments most likely to change this conclusion are:
+
+* **A hybrid objective:** JEPA plus a denoising/force-like auxiliary on the same encoder, or a
+  JEPA context view that adds coordinate noise. This tests whether JEPA adds anything *on
+  top of* denoising, which is the comparison that matters.
+* **The skipped arms from the full plan:** JEPA with the *teacher* (MACE) as the target encoder
+  versus plain feature distillation. A frozen, force-aware target removes JEPA's freedom to
+  discard force-relevant detail.
+* **Multiple seeds and more fine-tuning steps.** Scratch at 64 vs 256 labels barely differs,
+  so 1500 steps limits fine-tuning more than the label count does.
+
+### Caveats
+
+One seed; small students (~170k params) with short training; the teacher is MACE-MP-0 small,
+not DFT; in MTS the teacher stands in for a conservatively fine-tuned student; the JEPA masking
+ratio, radius, EMA schedule and predictor depth were not tuned; MD runs are only 0.5–1 ps.
 
 ## Reproduce
 

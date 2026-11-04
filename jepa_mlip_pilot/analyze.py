@@ -42,8 +42,14 @@ def jac_asym(model, fr, k):
 def cmd_jac(args):
     test = load("test")
     out = {}
+    if args.resume and os.path.exists("logs/jac.log"):  # reuse finished entries ("tag {json}" lines)
+        for line in open("logs/jac.log"):
+            tag, js = line.split(" ", 1)
+            out[tag] = json.loads(js)
     for path in sorted(glob.glob(f"{CKPT_DIR}/ft_*.pt")):
         tag = os.path.basename(path)[3:-3]
+        if tag in out:
+            continue
         m = load_model(tag)
         out[tag] = {s: float(np.mean([jac_asym(m, test[s], k) for k in np.linspace(0, len(test[s]) - 1, args.n, dtype=int)]))
                     for s in SYSTEMS}
@@ -193,6 +199,7 @@ if __name__ == "__main__":
     ap.add_argument("--steps", type=int, default=1000)
     ap.add_argument("--strides", type=lambda s: [int(x) for x in s.split(",")], default=[2, 4, 8, 16])
     ap.add_argument("--threads", type=int, default=1)
+    ap.add_argument("--resume", action="store_true")
     args = ap.parse_args()
     torch.set_num_threads(args.threads)
     os.makedirs(RES_DIR, exist_ok=True)
