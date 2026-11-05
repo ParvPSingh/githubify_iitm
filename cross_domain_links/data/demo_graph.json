@@ -1,0 +1,827 @@
+{
+  "nodes": [
+    {
+      "id": "cancer",
+      "name": "cancer",
+      "type": "Disease",
+      "domain": "oncology",
+      "aliases": [
+        "malignancy",
+        "tumour",
+        "tumor"
+      ]
+    },
+    {
+      "id": "lung_cancer",
+      "name": "lung cancer",
+      "type": "Disease",
+      "domain": "oncology",
+      "aliases": []
+    },
+    {
+      "id": "mesothelioma",
+      "name": "mesothelioma",
+      "type": "Disease",
+      "domain": "oncology",
+      "aliases": []
+    },
+    {
+      "id": "aml",
+      "name": "acute myeloid leukaemia",
+      "type": "Disease",
+      "domain": "oncology",
+      "aliases": [
+        "AML",
+        "acute myeloid leukemia"
+      ]
+    },
+    {
+      "id": "melanoma",
+      "name": "melanoma",
+      "type": "Disease",
+      "domain": "oncology",
+      "aliases": []
+    },
+    {
+      "id": "testicular_cancer",
+      "name": "testicular cancer",
+      "type": "Disease",
+      "domain": "oncology",
+      "aliases": [
+        "testicular germ-cell tumours"
+      ]
+    },
+    {
+      "id": "chemotherapy",
+      "name": "chemotherapy",
+      "type": "Treatment",
+      "domain": "oncology",
+      "aliases": [
+        "chemotherapeutic"
+      ]
+    },
+    {
+      "id": "cisplatin",
+      "name": "cisplatin",
+      "type": "Chemical",
+      "domain": "pharmacology",
+      "aliases": []
+    },
+    {
+      "id": "immunosuppression",
+      "name": "immunosuppression",
+      "type": "Condition",
+      "domain": "immunology",
+      "aliases": [
+        "weakened immune system",
+        "immunocompromised"
+      ]
+    },
+    {
+      "id": "chickenpox",
+      "name": "chickenpox",
+      "type": "Disease",
+      "domain": "infectious disease",
+      "aliases": [
+        "varicella"
+      ]
+    },
+    {
+      "id": "vzv",
+      "name": "varicella-zoster virus",
+      "type": "Virus",
+      "domain": "virology",
+      "aliases": [
+        "VZV",
+        "human alphaherpesvirus 3"
+      ]
+    },
+    {
+      "id": "herpes_zoster",
+      "name": "herpes zoster",
+      "type": "Disease",
+      "domain": "infectious disease",
+      "aliases": [
+        "shingles",
+        "zoster"
+      ]
+    },
+    {
+      "id": "alphaherpes",
+      "name": "Alphaherpesvirinae",
+      "type": "Taxon",
+      "domain": "virology",
+      "aliases": [
+        "alphaherpesvirus",
+        "alphaherpesviruses"
+      ]
+    },
+    {
+      "id": "hsv1",
+      "name": "herpes simplex virus 1",
+      "type": "Virus",
+      "domain": "virology",
+      "aliases": [
+        "HSV-1",
+        "human alphaherpesvirus 1"
+      ]
+    },
+    {
+      "id": "tvec",
+      "name": "talimogene laherparepvec",
+      "type": "Treatment",
+      "domain": "oncology",
+      "aliases": [
+        "T-VEC"
+      ]
+    },
+    {
+      "id": "rzv",
+      "name": "recombinant zoster vaccine",
+      "type": "Vaccine",
+      "domain": "immunology",
+      "aliases": [
+        "RZV"
+      ]
+    },
+    {
+      "id": "automobile",
+      "name": "automobile",
+      "type": "Product",
+      "domain": "automotive",
+      "aliases": [
+        "car",
+        "motor vehicle",
+        "vehicle"
+      ]
+    },
+    {
+      "id": "diesel_engine",
+      "name": "diesel engine",
+      "type": "Component",
+      "domain": "automotive",
+      "aliases": [
+        "diesel engines"
+      ]
+    },
+    {
+      "id": "diesel_exhaust",
+      "name": "diesel engine exhaust",
+      "type": "Chemical mixture",
+      "domain": "environmental health",
+      "aliases": [
+        "diesel exhaust"
+      ]
+    },
+    {
+      "id": "brake_lining",
+      "name": "brake lining",
+      "type": "Component",
+      "domain": "automotive",
+      "aliases": [
+        "brake linings",
+        "brakes"
+      ]
+    },
+    {
+      "id": "asbestos",
+      "name": "asbestos",
+      "type": "Material",
+      "domain": "materials",
+      "aliases": []
+    },
+    {
+      "id": "gasoline",
+      "name": "gasoline",
+      "type": "Fuel",
+      "domain": "automotive",
+      "aliases": [
+        "petrol"
+      ]
+    },
+    {
+      "id": "benzene",
+      "name": "benzene",
+      "type": "Chemical",
+      "domain": "chemistry",
+      "aliases": []
+    },
+    {
+      "id": "catalytic_converter",
+      "name": "catalytic converter",
+      "type": "Component",
+      "domain": "automotive",
+      "aliases": [
+        "catalytic converters",
+        "autocatalyst"
+      ]
+    },
+    {
+      "id": "platinum",
+      "name": "platinum",
+      "type": "Element",
+      "domain": "materials",
+      "aliases": [
+        "platinum-group metals",
+        "Pt"
+      ]
+    },
+    {
+      "id": "patients",
+      "name": "patients",
+      "type": "Generic",
+      "domain": "general",
+      "aliases": [
+        "patient"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "src": "lung_cancer",
+      "dst": "cancer",
+      "relation": "is a",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Lung cancer is a cancer arising in lung tissue.",
+          "source": "Disease hierarchy (MeSH / Disease Ontology)",
+          "year": 1960,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "mesothelioma",
+      "dst": "cancer",
+      "relation": "is a",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Mesothelioma is a cancer of the mesothelium.",
+          "source": "Disease hierarchy (MeSH / Disease Ontology)",
+          "year": 1960,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "aml",
+      "dst": "cancer",
+      "relation": "is a",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Acute myeloid leukaemia is a cancer of the myeloid blood-cell line.",
+          "source": "Disease hierarchy (MeSH / Disease Ontology)",
+          "year": 1960,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "melanoma",
+      "dst": "cancer",
+      "relation": "is a",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Melanoma is a cancer of melanocytes.",
+          "source": "Disease hierarchy (MeSH / Disease Ontology)",
+          "year": 1960,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "testicular_cancer",
+      "dst": "cancer",
+      "relation": "is a",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Testicular cancer is a cancer of the testis, mostly germ-cell tumours.",
+          "source": "Disease hierarchy (MeSH / Disease Ontology)",
+          "year": 1960,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "automobile",
+      "dst": "diesel_engine",
+      "relation": "may be powered by",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Many cars, vans and trucks — motor vehicle classes — are powered by a diesel engine.",
+          "source": "Automotive engineering reference",
+          "year": 1936,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "diesel_engine",
+      "dst": "diesel_exhaust",
+      "relation": "emits",
+      "kind": "causal",
+      "evidence": [
+        {
+          "text": "A diesel engine emits diesel engine exhaust, a mixture of gases and soot particles.",
+          "source": "IARC Monographs Vol. 105 (2014)",
+          "year": 2012,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "diesel_exhaust",
+      "dst": "lung_cancer",
+      "relation": "causes",
+      "kind": "causal",
+      "evidence": [
+        {
+          "text": "IARC classified diesel engine exhaust as carcinogenic to humans (Group 1), based on sufficient evidence that it causes lung cancer.",
+          "source": "IARC Monographs Vol. 105; IARC press release No. 213 (June 2012)",
+          "year": 2012,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "automobile",
+      "dst": "brake_lining",
+      "relation": "has part",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Every automobile has brakes; drum and disc brakes use friction material such as a brake lining.",
+          "source": "Automotive engineering reference",
+          "year": 1920,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "brake_lining",
+      "dst": "asbestos",
+      "relation": "historically contained",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Asbestos was widely used in vehicle brake linings and clutch facings.",
+          "source": "US EPA, asbestos in automotive brakes and clutches",
+          "year": 1986,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "asbestos",
+      "dst": "mesothelioma",
+      "relation": "causes",
+      "kind": "causal",
+      "evidence": [
+        {
+          "text": "Asbestos (all forms) causes mesothelioma and cancer of the lung, larynx and ovary.",
+          "source": "IARC Monographs Vol. 100C (2012)",
+          "year": 2012,
+          "url": null
+        },
+        {
+          "text": "Diffuse pleural mesothelioma was linked to asbestos exposure in the North Western Cape Province.",
+          "source": "Wagner, Sleggs & Marchand, Br J Ind Med 1960",
+          "year": 1960,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "automobile",
+      "dst": "gasoline",
+      "relation": "is fuelled by",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Most automobiles are fuelled by gasoline.",
+          "source": "Automotive engineering reference",
+          "year": 1900,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "gasoline",
+      "dst": "benzene",
+      "relation": "contains",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "US rules limit benzene in gasoline to an annual average of 0.62% by volume.",
+          "source": "US EPA Mobile Source Air Toxics rule (2007)",
+          "year": 2007,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "benzene",
+      "dst": "aml",
+      "relation": "causes",
+      "kind": "causal",
+      "evidence": [
+        {
+          "text": "There is sufficient evidence in humans that benzene causes acute myeloid leukaemia.",
+          "source": "IARC Monographs Vol. 120 (2018)",
+          "year": 2018,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "automobile",
+      "dst": "catalytic_converter",
+      "relation": "has part",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Gasoline automobiles sold in the US since 1975 carry a catalytic converter.",
+          "source": "US emission standards history",
+          "year": 1975,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "catalytic_converter",
+      "dst": "platinum",
+      "relation": "contains",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "A catalytic converter uses platinum-group metals (platinum, palladium, rhodium) as the catalyst.",
+          "source": "Automotive catalysis literature",
+          "year": 1975,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "platinum",
+      "dst": "cisplatin",
+      "relation": "is the active metal in",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Platinum electrode electrolysis products inhibited cell division in E. coli, leading to the discovery of cisplatin.",
+          "source": "Rosenberg, Van Camp & Krigas, Nature 1965",
+          "year": 1965,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "cisplatin",
+      "dst": "testicular_cancer",
+      "relation": "treats",
+      "kind": "causal",
+      "evidence": [
+        {
+          "text": "Cisplatin-based combination chemotherapy produced durable complete remissions in disseminated testicular cancer.",
+          "source": "Einhorn & Donohue, Ann Intern Med 1977",
+          "year": 1977,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "cisplatin",
+      "dst": "chemotherapy",
+      "relation": "is a",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Cisplatin is a platinum-based chemotherapy drug.",
+          "source": "Pharmacology reference",
+          "year": 1978,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "chemotherapy",
+      "dst": "cancer",
+      "relation": "treats",
+      "kind": "causal",
+      "evidence": [
+        {
+          "text": "Chemotherapy is a standard treatment for many types of cancer.",
+          "source": "Oncology reference",
+          "year": 1950,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "chemotherapy",
+      "dst": "immunosuppression",
+      "relation": "can cause",
+      "kind": "causal",
+      "evidence": [
+        {
+          "text": "Chemotherapy can cause immunosuppression by depleting white blood cells.",
+          "source": "Oncology reference",
+          "year": 1960,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "immunosuppression",
+      "dst": "herpes_zoster",
+      "relation": "increases risk of",
+      "kind": "associative",
+      "evidence": [
+        {
+          "text": "People who are immunocompromised have a higher risk of herpes zoster (shingles).",
+          "source": "CDC, Shingles clinical overview",
+          "year": 2008,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "cancer",
+      "dst": "herpes_zoster",
+      "relation": "increases risk of",
+      "kind": "associative",
+      "evidence": [
+        {
+          "text": "People with cancer, especially blood cancers, are at increased risk of shingles because of a weakened immune system.",
+          "source": "CDC, Shingles clinical overview",
+          "year": 2008,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "vzv",
+      "dst": "herpes_zoster",
+      "relation": "reactivates as",
+      "kind": "causal",
+      "evidence": [
+        {
+          "text": "After chickenpox, varicella-zoster virus stays latent in sensory ganglia and can reactivate as herpes zoster.",
+          "source": "Gershon et al., Nat Rev Dis Primers 2015",
+          "year": 2015,
+          "url": null
+        },
+        {
+          "text": "Herpes zoster was proposed to be a reactivation of latent varicella-zoster virus acquired during chickenpox.",
+          "source": "Hope-Simpson, Proc R Soc Med 1965",
+          "year": 1965,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "vzv",
+      "dst": "chickenpox",
+      "relation": "causes",
+      "kind": "causal",
+      "evidence": [
+        {
+          "text": "Chickenpox is caused by primary infection with varicella-zoster virus.",
+          "source": "CDC, Chickenpox clinical overview",
+          "year": 1953,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "rzv",
+      "dst": "herpes_zoster",
+      "relation": "prevents",
+      "kind": "causal",
+      "evidence": [
+        {
+          "text": "ACIP recommends recombinant zoster vaccine to prevent herpes zoster in immunocompromised adults aged 19 and older.",
+          "source": "Anderson et al., MMWR 2022",
+          "year": 2022,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "rzv",
+      "dst": "immunosuppression",
+      "relation": "recommended in",
+      "kind": "associative",
+      "evidence": [
+        {
+          "text": "Recombinant zoster vaccine is recommended for adults who are immunocompromised, for example from cancer treatment.",
+          "source": "Anderson et al., MMWR 2022",
+          "year": 2022,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "vzv",
+      "dst": "alphaherpes",
+      "relation": "member of",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Varicella-zoster virus (human alphaherpesvirus 3) belongs to the subfamily Alphaherpesvirinae.",
+          "source": "ICTV taxonomy",
+          "year": 1979,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "hsv1",
+      "dst": "alphaherpes",
+      "relation": "member of",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Herpes simplex virus 1 (human alphaherpesvirus 1) belongs to the subfamily Alphaherpesvirinae.",
+          "source": "ICTV taxonomy",
+          "year": 1979,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "tvec",
+      "dst": "hsv1",
+      "relation": "derived from",
+      "kind": "mechanistic",
+      "evidence": [
+        {
+          "text": "Talimogene laherparepvec is an oncolytic virus derived from herpes simplex virus 1.",
+          "source": "Andtbacka et al., J Clin Oncol 2015",
+          "year": 2015,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "tvec",
+      "dst": "melanoma",
+      "relation": "treats",
+      "kind": "causal",
+      "evidence": [
+        {
+          "text": "Talimogene laherparepvec improved durable response rate in advanced melanoma (OPTiM trial).",
+          "source": "Andtbacka et al., J Clin Oncol 2015",
+          "year": 2015,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "patients",
+      "dst": "cancer",
+      "relation": "co-mentioned with",
+      "kind": "cooccurrence",
+      "evidence": [
+        {
+          "text": "Patients with cancer were included in the study.",
+          "source": "co-occurrence sample",
+          "year": 2000,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "patients",
+      "dst": "chickenpox",
+      "relation": "co-mentioned with",
+      "kind": "cooccurrence",
+      "evidence": [
+        {
+          "text": "Patients with chickenpox were included in the study.",
+          "source": "co-occurrence sample",
+          "year": 2000,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "patients",
+      "dst": "lung_cancer",
+      "relation": "co-mentioned with",
+      "kind": "cooccurrence",
+      "evidence": [
+        {
+          "text": "Patients with lung cancer were included in the study.",
+          "source": "co-occurrence sample",
+          "year": 2000,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "patients",
+      "dst": "melanoma",
+      "relation": "co-mentioned with",
+      "kind": "cooccurrence",
+      "evidence": [
+        {
+          "text": "Patients with melanoma were included in the study.",
+          "source": "co-occurrence sample",
+          "year": 2000,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "patients",
+      "dst": "herpes_zoster",
+      "relation": "co-mentioned with",
+      "kind": "cooccurrence",
+      "evidence": [
+        {
+          "text": "Patients with herpes zoster were included in the study.",
+          "source": "co-occurrence sample",
+          "year": 2000,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "patients",
+      "dst": "aml",
+      "relation": "co-mentioned with",
+      "kind": "cooccurrence",
+      "evidence": [
+        {
+          "text": "Patients with AML were included in the study.",
+          "source": "co-occurrence sample",
+          "year": 2000,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "patients",
+      "dst": "mesothelioma",
+      "relation": "co-mentioned with",
+      "kind": "cooccurrence",
+      "evidence": [
+        {
+          "text": "Patients with mesothelioma were included in the study.",
+          "source": "co-occurrence sample",
+          "year": 2000,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "patients",
+      "dst": "chemotherapy",
+      "relation": "co-mentioned with",
+      "kind": "cooccurrence",
+      "evidence": [
+        {
+          "text": "Patients with chemotherapy were included in the study.",
+          "source": "co-occurrence sample",
+          "year": 2000,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "patients",
+      "dst": "automobile",
+      "relation": "co-mentioned with",
+      "kind": "cooccurrence",
+      "evidence": [
+        {
+          "text": "Patients injured in automobile collisions were admitted to the trauma unit.",
+          "source": "co-occurrence sample",
+          "year": 2000,
+          "url": null
+        }
+      ]
+    },
+    {
+      "src": "cancer",
+      "dst": "automobile",
+      "relation": "is like",
+      "kind": "analogical",
+      "evidence": [
+        {
+          "text": "Cancer is often explained as a car with the accelerator stuck (oncogenes) and the brakes broken (tumour suppressors).",
+          "source": "Common teaching analogy",
+          "year": 2000,
+          "url": null
+        }
+      ]
+    }
+  ]
+}
