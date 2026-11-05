@@ -64,10 +64,14 @@ python3 -m linkfinder graph fish.json "fish oil" "Raynaud"
   live service** (the build environment had no access to NCBI). Its parser is unit-tested on a synthetic document.
   It only produces `cooccurrence` edges. Typed edges need a relation extractor or SemMedDB.
 - `ClaudeVerifier` has not been exercised here (no API key in the build environment).
-- The ranking weights (`w=0.4`, kind weights, decay) are hand-set. Learning them from time-sliced data is the
-  obvious next step.
+- The ranking weights are hand-set. The hub penalty (`w=0.1`) was tuned on Hetionet; see `experiments/RESULTS.md`.
 - In the `--until 2010` demo, co-occurrence chains through the `patients` hub fill the lower ranks once the
   strong chains are removed. A minimum-evidence threshold per hop is needed.
+
+## Experiments
+
+See [`experiments/RESULTS.md`](experiments/RESULTS.md) for held-out treatment recovery on Hetionet,
+cross-domain pairs on ConceptNet, a hub-penalty sweep, and a verifier stress test.
 
 ## Next steps
 

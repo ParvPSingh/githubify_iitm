@@ -1,0 +1,44 @@
+[
+ {
+  "w": 0.0,
+  "auroc": 0.6607917469155813,
+  "textbook_rate": 0.4368421052631579,
+  "median_intermediate_degree": 515.5
+ },
+ {
+  "w": 0.05,
+  "auroc": 0.6711122976297171,
+  "textbook_rate": 0.4421052631578947,
+  "median_intermediate_degree": 385.0
+ },
+ {
+  "w": 0.1,
+  "auroc": 0.6741633454739612,
+  "textbook_rate": 0.41842105263157897,
+  "median_intermediate_degree": 276.0
+ },
+ {
+  "w": 0.15,
+  "auroc": 0.6712907839286055,
+  "textbook_rate": 0.3684210526315789,
+  "median_intermediate_degree": 239.0
+ },
+ {
+  "w": 0.2,
+  "auroc": 0.6668511279342499,
+  "textbook_rate": 0.3157894736842105,
+  "median_intermediate_degree": 188.25
+ },
+ {
+  "w": 0.3,
+  "auroc": 0.6556530195839134,
+  "textbook_rate": 0.18421052631578946,
+  "median_intermediate_degree": 162.0
+ },
+ {
+  "w": 0.4,
+  "auroc": 0.6496847886195916,
+  "textbook_rate": 0.14649122807017545,
+  "median_intermediate_degree": 148.75
+ }
+]

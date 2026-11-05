@@ -1,0 +1,333 @@
+===== cancer ⇄ car: 206 chains ≤3 hops =====
+#1 cancer → result in death → car crash → car
+   score 0.0144 | specificity 0.0497 | evidence 0.357 | domains: conceptnet | status: verified
+   ✔ cancer —[CapableOf · mechanistic]→ result in death
+       “cancer can result in death”  [ConceptNet /d/conceptnet/4/en#0]
+       (+1 more source)
+   ✔ result in death ←[CapableOf · mechanistic]— car crash
+       “A car crash can result in death”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ car crash —[RelatedTo · cooccurrence]→ car
+       “car crash RelatedTo car”  [ConceptNet /d/wiktionary/en#0]
+#2 cancer → very dangerous → firebomb → car
+   score 0.0132 | specificity 0.0361 | evidence 0.45 | domains: conceptnet | status: verified
+   ✔ cancer —[HasProperty · mechanistic]→ very dangerous
+       “Cancer is very dangerous”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ very dangerous ←[HasProperty · mechanistic]— firebomb
+       “A firebomb is very dangerous”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ firebomb —[AtLocation · mechanistic]→ car
+       “You are likely to find a firebomb in a car”  [ConceptNet /d/conceptnet/4/en#0]
+#3 cancer → smoking → lighter → car
+   score 0.00739 | specificity 0.015 | evidence 0.608 | domains: conceptnet | status: verified
+   ✔ cancer ←[Causes · causal]— smoking
+       “The effect of smoking is cancer”  [ConceptNet /d/conceptnet/4/en#0]
+       (+11 more sources)
+   ✔ smoking —[HasPrerequisite · causal]→ lighter
+       “smoking requires a lighter”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ lighter —[AtLocation · mechanistic]→ car
+       “*Something you find in a car is a lighter”  [ConceptNet /d/conceptnet/4/en#0]
+-- without hub penalty, top 3: cancer → smoking → driving → car | cancer → kill → machine → car | cancer → going_outside_for_evening → fun → car
+
+===== cancer ⇄ car (RelatedTo removed): 51 chains ≤3 hops =====
+#1 cancer → very dangerous → firebomb → car
+   score 0.0132 | specificity 0.0361 | evidence 0.45 | domains: conceptnet | status: verified
+   ✔ cancer —[HasProperty · mechanistic]→ very dangerous
+       “Cancer is very dangerous”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ very dangerous ←[HasProperty · mechanistic]— firebomb
+       “A firebomb is very dangerous”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ firebomb —[AtLocation · mechanistic]→ car
+       “You are likely to find a firebomb in a car”  [ConceptNet /d/conceptnet/4/en#0]
+#2 cancer → smoking → lighter → car
+   score 0.00739 | specificity 0.015 | evidence 0.608 | domains: conceptnet | status: verified
+   ✔ cancer ←[Causes · causal]— smoking
+       “The effect of smoking is cancer”  [ConceptNet /d/conceptnet/4/en#0]
+       (+11 more sources)
+   ✔ smoking —[HasPrerequisite · causal]→ lighter
+       “smoking requires a lighter”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ lighter —[AtLocation · mechanistic]→ car
+       “*Something you find in a car is a lighter”  [ConceptNet /d/conceptnet/4/en#0]
+#3 cancer → smoking → driving → car
+   score 0.00643 | specificity 0.00909 | evidence 0.873 | domains: conceptnet | status: verified
+   ✔ cancer ←[Causes · causal]— smoking
+       “The effect of smoking is cancer”  [ConceptNet /d/conceptnet/4/en#0]
+       (+11 more sources)
+   ✔ smoking ←[HasSubevent · mechanistic]— driving
+       “Something you might do while driving is smoking”  [ConceptNet /d/conceptnet/4/en#0]
+       (+1 more source)
+   ✔ driving —[HasPrerequisite · causal]→ car
+       “driving requires a car”  [ConceptNet /d/conceptnet/4/en#0]
+       (+5 more sources)
+-- without hub penalty, top 3: cancer → smoking → driving → car | cancer → kill → machine → car | cancer → going_outside_for_evening → fun → car
+
+===== cancer ⇄ chickenpox: 56 chains ≤3 hops =====
+#1 cancer → thyroid cancer → disease → chickenpox
+   score 0.0105 | specificity 0.0289 | evidence 0.45 | domains: conceptnet | status: verified
+   ✔ cancer ←[IsA · mechanistic]— thyroid cancer
+       “thyroid cancer IsA cancer”  [ConceptNet /d/opencyc#0]
+   ✔ thyroid cancer —[IsA · mechanistic]→ disease
+       “thyroid cancer IsA disease”  [ConceptNet /d/dbpedia/en#0]
+   ✔ disease ←[IsA · mechanistic]— chickenpox
+       “chickenpox IsA disease”  [ConceptNet /d/dbpedia/en#0]
+#2 cancer → testicular cancer → disease → chickenpox
+   score 0.0105 | specificity 0.0289 | evidence 0.45 | domains: conceptnet | status: verified
+   ✔ cancer ←[IsA · mechanistic]— testicular cancer
+       “testicular cancer IsA cancer”  [ConceptNet /d/opencyc#0]
+   ✔ testicular cancer —[IsA · mechanistic]→ disease
+       “testicular cancer IsA disease”  [ConceptNet /d/dbpedia/en#0]
+   ✔ disease ←[IsA · mechanistic]— chickenpox
+       “chickenpox IsA disease”  [ConceptNet /d/dbpedia/en#0]
+#3 cancer → anal cancer → disease → chickenpox
+   score 0.00976 | specificity 0.0268 | evidence 0.45 | domains: conceptnet | status: verified
+   ✔ cancer ←[IsA · mechanistic]— anal cancer
+       “anal cancer IsA cancer”  [ConceptNet /d/opencyc#0]
+   ✔ anal cancer —[IsA · mechanistic]→ disease
+       “anal cancer IsA disease”  [ConceptNet /d/dbpedia/en#0]
+   ✔ disease ←[IsA · mechanistic]— chickenpox
+       “chickenpox IsA disease”  [ConceptNet /d/dbpedia/en#0]
+-- without hub penalty, top 3: cancer → disease → chickenpox | cancer → death → south_park → chickenpox | cancer → death → television_episode → chickenpox
+
+===== cancer ⇄ chickenpox (RelatedTo removed): 21 chains ≤3 hops =====
+#1 cancer → thyroid cancer → disease → chickenpox
+   score 0.0105 | specificity 0.0289 | evidence 0.45 | domains: conceptnet | status: verified
+   ✔ cancer ←[IsA · mechanistic]— thyroid cancer
+       “thyroid cancer IsA cancer”  [ConceptNet /d/opencyc#0]
+   ✔ thyroid cancer —[IsA · mechanistic]→ disease
+       “thyroid cancer IsA disease”  [ConceptNet /d/dbpedia/en#0]
+   ✔ disease ←[IsA · mechanistic]— chickenpox
+       “chickenpox IsA disease”  [ConceptNet /d/dbpedia/en#0]
+#2 cancer → testicular cancer → disease → chickenpox
+   score 0.0105 | specificity 0.0289 | evidence 0.45 | domains: conceptnet | status: verified
+   ✔ cancer ←[IsA · mechanistic]— testicular cancer
+       “testicular cancer IsA cancer”  [ConceptNet /d/opencyc#0]
+   ✔ testicular cancer —[IsA · mechanistic]→ disease
+       “testicular cancer IsA disease”  [ConceptNet /d/dbpedia/en#0]
+   ✔ disease ←[IsA · mechanistic]— chickenpox
+       “chickenpox IsA disease”  [ConceptNet /d/dbpedia/en#0]
+#3 cancer → anal cancer → disease → chickenpox
+   score 0.00976 | specificity 0.0268 | evidence 0.45 | domains: conceptnet | status: verified
+   ✔ cancer ←[IsA · mechanistic]— anal cancer
+       “anal cancer IsA cancer”  [ConceptNet /d/opencyc#0]
+   ✔ anal cancer —[IsA · mechanistic]→ disease
+       “anal cancer IsA disease”  [ConceptNet /d/dbpedia/en#0]
+   ✔ disease ←[IsA · mechanistic]— chickenpox
+       “chickenpox IsA disease”  [ConceptNet /d/dbpedia/en#0]
+-- without hub penalty, top 3: cancer → disease → chickenpox | cancer → death → south_park → chickenpox | cancer → death → television_episode → chickenpox
+
+===== music ⇄ mathematics: 5000 chains ≤3 hops =====
+#1 music → riemannian → riemann → mathematics
+   score 0.0117 | specificity 0.055 | evidence 0.264 | domains: conceptnet | status: verified
+   ✔ music ←[HasContext · associative]— riemannian
+       “riemannian HasContext music”  [ConceptNet /d/wiktionary/en#0]
+   ✔ riemannian —[RelatedTo · cooccurrence]→ riemann
+       “riemannian RelatedTo riemann”  [ConceptNet /d/wiktionary/en#0]
+   ✔ riemann —[HasContext · associative]→ mathematics
+       “riemann HasContext mathematics”  [ConceptNet /d/wiktionary/en#0]
+#2 music → polymodality → multimodality → mathematics
+   score 0.00976 | specificity 0.0457 | evidence 0.264 | domains: conceptnet | status: verified
+   ✔ music ←[HasContext · associative]— polymodality
+       “polymodality HasContext music”  [ConceptNet /d/wiktionary/en#0]
+   ✔ polymodality —[RelatedTo · cooccurrence]→ multimodality
+       “polymodality RelatedTo multimodality”  [ConceptNet /d/wiktionary/en#0]
+   ✔ multimodality —[HasContext · associative]→ mathematics
+       “multimodality HasContext mathematics”  [ConceptNet /d/wiktionary/en#0]
+#3 music → supersaw → sawtooth wave → mathematics
+   score 0.00976 | specificity 0.0457 | evidence 0.264 | domains: conceptnet | status: verified
+   ✔ music ←[HasContext · associative]— supersaw
+       “supersaw HasContext music”  [ConceptNet /d/wiktionary/en#0]
+   ✔ supersaw ←[RelatedTo · cooccurrence]— sawtooth wave
+       “sawtooth wave RelatedTo supersaw”  [ConceptNet /d/wiktionary/en#0]
+   ✔ sawtooth wave —[HasContext · associative]→ mathematics
+       “sawtooth wave HasContext mathematics”  [ConceptNet /d/wiktionary/en#0]
+-- without hub penalty, top 3: music → instrument → triangle → mathematics | music → musical_instrument → triangle → mathematics | music → figure → triangle → mathematics
+
+===== music ⇄ mathematics (RelatedTo removed): 819 chains ≤3 hops =====
+#1 music → pyrotechnics → gerbe → mathematics
+   score 0.00824 | specificity 0.0291 | evidence 0.35 | domains: conceptnet | status: verified
+   ✔ music ←[HasContext · associative]— pyrotechnics
+       “pyrotechnics is used in the context of music”  [ConceptNet /d/wordnet/3.1#0]
+   ✔ pyrotechnics ←[HasContext · associative]— gerbe
+       “gerbe HasContext pyrotechnics”  [ConceptNet /d/wiktionary/en#0]
+   ✔ gerbe —[HasContext · associative]→ mathematics
+       “gerbe HasContext mathematics”  [ConceptNet /d/wiktionary/en#0]
+#2 music → progression → harmonic progression → mathematics
+   score 0.00779 | specificity 0.0253 | evidence 0.381 | domains: conceptnet | status: verified
+   ✔ music ←[HasContext · associative]— progression
+       “progression HasContext music”  [ConceptNet /d/wiktionary/en#0]
+   ✔ progression ←[IsA · mechanistic]— harmonic progression
+       “harmonic progression is a type of progression”  [ConceptNet /d/wordnet/3.1#0]
+   ✔ harmonic progression —[HasContext · associative]→ mathematics
+       “harmonic progression is used in the context of mathematics”  [ConceptNet /d/wordnet/3.1#0]
+#3 music → progression → geometric progression → mathematics
+   score 0.00729 | specificity 0.0236 | evidence 0.381 | domains: conceptnet | status: verified
+   ✔ music ←[HasContext · associative]— progression
+       “progression HasContext music”  [ConceptNet /d/wiktionary/en#0]
+   ✔ progression ←[IsA · mechanistic]— geometric progression
+       “geometric progression is a type of progression”  [ConceptNet /d/wordnet/3.1#0]
+   ✔ geometric progression —[HasContext · associative]→ mathematics
+       “geometric progression is used in the context of mathematics”  [ConceptNet /d/wordnet/3.1#0]
+-- without hub penalty, top 3: music → instrument → triangle → mathematics | music → musical_instrument → triangle → mathematics | music → subject → geometry → mathematics
+
+===== spider ⇄ bridge: 469 chains ≤3 hops =====
+#1 spider → snooker → chinese snooker → bridge
+   score 0.00937 | specificity 0.0438 | evidence 0.264 | domains: conceptnet | status: verified
+   ✔ spider —[HasContext · associative]→ snooker
+       “spider HasContext snooker”  [ConceptNet /d/wiktionary/en#0]
+   ✔ snooker ←[HasContext · associative]— chinese snooker
+       “chinese snooker HasContext snooker”  [ConceptNet /d/wiktionary/en#0]
+   ✔ chinese snooker —[RelatedTo · cooccurrence]→ bridge
+       “chinese snooker RelatedTo bridge”  [ConceptNet /d/wiktionary/en#0]
+#2 spider → heroin → druggies → bridge
+   score 0.00707 | specificity 0.0403 | evidence 0.216 | domains: conceptnet | status: verified
+   ✔ spider —[RelatedTo · cooccurrence]→ heroin
+       “spider RelatedTo heroin”  [ConceptNet /d/wiktionary/en#0]
+   ✔ heroin —[RelatedTo · cooccurrence]→ druggies
+       “heroin is related to druggies”  [ConceptNet /d/verbosity#0]
+   ✔ druggies —[AtLocation · mechanistic]→ bridge
+       “*Something you find under a bridge is druggies”  [ConceptNet /d/conceptnet/4/en#0]
+#3 spider → catch flies → mouth → bridge
+   score 0.00699 | specificity 0.0277 | evidence 0.312 | domains: conceptnet | status: verified
+   ✔ spider —[CapableOf · mechanistic]→ catch flies
+       “A spider can catch flies”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ catch flies —[RelatedTo · cooccurrence]→ mouth
+       “catch flies RelatedTo mouth”  [ConceptNet /d/wiktionary/en#0]
+   ✔ mouth ←[AtLocation · mechanistic]— bridge
+       “You are likely to find a bridge in a mouth”  [ConceptNet /d/conceptnet/4/en#0]
+-- without hub penalty, top 3: spider → music → rock → bridge | spider → animal → fish → bridge | spider → music → guitar → bridge
+
+===== spider ⇄ bridge (RelatedTo removed): 107 chains ≤3 hops =====
+#1 spider → billiards → bridge
+   score 0.00471 | specificity 0.015 | evidence 0.35 | domains: conceptnet | status: verified
+   ✔ spider —[HasContext · associative]→ billiards
+       “spider HasContext billiards”  [ConceptNet /d/wiktionary/en#0]
+   ✔ billiards ←[HasContext · associative]— bridge
+       “bridge HasContext billiards”  [ConceptNet /d/wiktionary/en#0]
+#2 spider → mail box → air → bridge
+   score 0.00467 | specificity 0.0128 | evidence 0.45 | domains: conceptnet | status: verified
+   ✔ spider —[AtLocation · mechanistic]→ mail box
+       “*Something you find in the mail box is a spider”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ mail box ←[AtLocation · mechanistic]— air
+       “*Something you find in the mail box is air”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ air —[AtLocation · mechanistic]→ bridge
+       “*Something you find under a bridge is air”  [ConceptNet /d/conceptnet/4/en#0]
+#3 spider → music → middle eight → bridge
+   score 0.00462 | specificity 0.015 | evidence 0.381 | domains: conceptnet | status: verified
+   ✔ spider —[HasContext · associative]→ music
+       “spider HasContext music”  [ConceptNet /d/wiktionary/en#0]
+   ✔ music ←[HasContext · associative]— middle eight
+       “middle eight HasContext music”  [ConceptNet /d/wiktionary/en#0]
+   ✔ middle eight —[IsA · mechanistic]→ bridge
+       “middle eight IsA bridge”  [ConceptNet /d/wiktionary/en#0]
+-- without hub penalty, top 3: spider → music → rock → bridge | spider → animal → fish → bridge | spider → music → guitar → bridge
+
+===== bird ⇄ airplane: 718 chains ≤3 hops =====
+#1 bird → travel across world → airplane
+   score 0.0176 | specificity 0.0434 | evidence 0.45 | domains: conceptnet | status: weak
+   ~ bird —[CapableOf · mechanistic]→ travel across world
+       “A bird can travel across the world”  [ConceptNet /d/conceptnet/4/en#0]
+   ~ travel across world ←[CapableOf · mechanistic]— airplane
+       “An airplane can travel across the world”  [ConceptNet /d/conceptnet/4/en#0]
+#2 bird → two wings → airplanes → airplane
+   score 0.0146 | specificity 0.048 | evidence 0.376 | domains: conceptnet | status: verified
+   ✔ bird —[HasA · mechanistic]→ two wings
+       “a bird has two wings”  [ConceptNet /d/conceptnet/4/en#0]
+       (+2 more sources)
+   ✔ two wings ←[HasA · mechanistic]— airplanes
+       “Airplanes have two wings”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ airplanes —[RelatedTo · cooccurrence]→ airplane
+       “airplanes RelatedTo airplane”  [ConceptNet /d/wiktionary/fr#0]
+#3 bird → plane → arrive at airport → airplane
+   score 0.0101 | specificity 0.0259 | evidence 0.48 | domains: conceptnet | status: weak
+   ✔ bird ←[RelatedTo · cooccurrence]— plane
+       “plane is related to bird”  [ConceptNet /d/verbosity#0]
+   ~ plane —[CapableOf · mechanistic]→ arrive at airport
+       “a plane can arrive at an airport”  [ConceptNet /d/conceptnet/4/en#0]
+       (+4 more sources)
+   ~ arrive at airport ←[CapableOf · mechanistic]— airplane
+       “an airplane can arrive at the airport”  [ConceptNet /d/conceptnet/4/en#0]
+       (+3 more sources)
+-- without hub penalty, top 3: bird → sky → airplane | bird → air → airplane | bird → owl → air → airplane
+
+===== bird ⇄ airplane (RelatedTo removed): 107 chains ≤3 hops =====
+#1 bird → travel across world → airplane
+   score 0.0176 | specificity 0.0434 | evidence 0.45 | domains: conceptnet | status: weak
+   ~ bird —[CapableOf · mechanistic]→ travel across world
+       “A bird can travel across the world”  [ConceptNet /d/conceptnet/4/en#0]
+   ~ travel across world ←[CapableOf · mechanistic]— airplane
+       “An airplane can travel across the world”  [ConceptNet /d/conceptnet/4/en#0]
+#2 bird → wings → flying → airplane
+   score 0.00881 | specificity 0.0159 | evidence 0.683 | domains: conceptnet | status: verified
+   ✔ bird —[HasA · mechanistic]→ wings
+       “A bird has wings”  [ConceptNet /d/conceptnet/4/en#0]
+       (+2 more sources)
+   ✔ wings —[UsedFor · mechanistic]→ flying
+       “a wings is for flying”  [ConceptNet /d/conceptnet/4/en#0]
+       (+11 more sources)
+   ✔ flying ←[UsedFor · mechanistic]— airplane
+       “an airplane is for flying”  [ConceptNet /d/conceptnet/4/en#0]
+#3 bird → tweety → fly → airplane
+   score 0.00794 | specificity 0.019 | evidence 0.515 | domains: conceptnet | status: verified
+   ✔ bird ←[IsA · mechanistic]— tweety
+       “tweety is a bird”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ tweety —[CapableOf · mechanistic]→ fly
+       “tweety can fly”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ fly ←[UsedFor · mechanistic]— airplane
+       “You can use an airplane to fly”  [ConceptNet /d/conceptnet/4/en#0]
+       (+1 more source)
+-- without hub penalty, top 3: bird → sky → airplane | bird → air → airplane | bird → owl → air → airplane
+
+===== coffee ⇄ sleep: 326 chains ≤3 hops =====
+#1 coffee → caffine → going into trance → sleep
+   score 0.0155 | specificity 0.0411 | evidence 0.466 | domains: conceptnet | status: weak
+   ✔ coffee —[HasA · mechanistic]→ caffine
+       “Coffee contains caffine”  [ConceptNet /d/conceptnet/4/en#0]
+   ~ caffine ←[HasPrerequisite · causal]— going into trance
+       “going into a trance requires caffine”  [ConceptNet /d/conceptnet/4/en#0]
+   ~ going into trance —[HasSubevent · mechanistic]→ sleep
+       “Something you might do while going into a trance is sleep”  [ConceptNet /d/conceptnet/4/en#0]
+#2 coffee → waking up in morning → having dream → sleep
+   score 0.0139 | specificity 0.0368 | evidence 0.466 | domains: conceptnet | status: broken
+   ~ coffee ←[HasPrerequisite · causal]— waking up in morning
+       “waking up in the morning requires coffee”  [ConceptNet /d/conceptnet/4/en#0]
+   ✘ waking up in morning —[HasSubevent · mechanistic]→ having dream
+       “Something that might happen while waking up in the morning is having a dream”  [ConceptNet /d/conceptnet/4/en#0]
+   ~ having dream ←[HasSubevent · mechanistic]— sleep
+       “Something that might happen when you sleep is having a dream”  [ConceptNet /d/conceptnet/4/en#0]
+#3 coffee → waking → snoring → sleep
+   score 0.0137 | specificity 0.0322 | evidence 0.524 | domains: conceptnet | status: verified
+   ✔ coffee —[RelatedTo · cooccurrence]→ waking
+       “coffee is related to waking”  [ConceptNet /d/verbosity#0]
+   ✔ waking ←[Causes · causal]— snoring
+       “Something that might happen as a consequence of snoring is waking”  [ConceptNet /d/conceptnet/4/en#0]
+       (+4 more sources)
+   ✔ snoring —[HasPrerequisite · causal]→ sleep
+       “snoring requires sleep”  [ConceptNet /d/conceptnet/4/en#0]
+       (+6 more sources)
+-- without hub penalty, top 3: coffee → insomnia → going_to_bed → sleep | coffee → work → gather_energy_for_tomorrow → sleep | coffee → shelf → book → sleep
+
+===== coffee ⇄ sleep (RelatedTo removed): 52 chains ≤3 hops =====
+#1 coffee → caffine → going into trance → sleep
+   score 0.0155 | specificity 0.0411 | evidence 0.466 | domains: conceptnet | status: weak
+   ✔ coffee —[HasA · mechanistic]→ caffine
+       “Coffee contains caffine”  [ConceptNet /d/conceptnet/4/en#0]
+   ~ caffine ←[HasPrerequisite · causal]— going into trance
+       “going into a trance requires caffine”  [ConceptNet /d/conceptnet/4/en#0]
+   ~ going into trance —[HasSubevent · mechanistic]→ sleep
+       “Something you might do while going into a trance is sleep”  [ConceptNet /d/conceptnet/4/en#0]
+#2 coffee → waking up in morning → having dream → sleep
+   score 0.0139 | specificity 0.0368 | evidence 0.466 | domains: conceptnet | status: broken
+   ~ coffee ←[HasPrerequisite · causal]— waking up in morning
+       “waking up in the morning requires coffee”  [ConceptNet /d/conceptnet/4/en#0]
+   ✘ waking up in morning —[HasSubevent · mechanistic]→ having dream
+       “Something that might happen while waking up in the morning is having a dream”  [ConceptNet /d/conceptnet/4/en#0]
+   ~ having dream ←[HasSubevent · mechanistic]— sleep
+       “Something that might happen when you sleep is having a dream”  [ConceptNet /d/conceptnet/4/en#0]
+#3 coffee → insomnia → going to bed → sleep
+   score 0.0128 | specificity 0.0209 | evidence 0.759 | domains: conceptnet | status: verified
+   ✔ coffee —[Causes · causal]→ insomnia
+       “Sometimes coffee causes insomnia”  [ConceptNet /d/conceptnet/4/en#0]
+   ✔ insomnia ←[Causes · causal]— going to bed
+       “Sometimes going to bed causes insomnia”  [ConceptNet /d/conceptnet/4/en#0]
+       (+2 more sources)
+   ✔ going to bed —[Causes · causal]→ sleep
+       “Sometimes going to bed causes sleep”  [ConceptNet /d/conceptnet/4/en#0]
+       (+9 more sources)
+-- without hub penalty, top 3: coffee → insomnia → going_to_bed → sleep | coffee → work → gather_energy_for_tomorrow → sleep | coffee → shelf → book → sleep

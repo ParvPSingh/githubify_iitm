@@ -1,0 +1,145 @@
+{
+ "E1": {
+  "path_count": {
+   "auroc": 0.5577918041227284,
+   "auprc": 0.5346634887945693
+  },
+  "dwpc": {
+   "auroc": 0.6378894376537442,
+   "auprc": 0.5958152803728387
+  },
+  "ev_dwpc": {
+   "auroc": 0.6579863084227989,
+   "auprc": 0.628805730057922
+  },
+  "best_chain": {
+   "auroc": 0.6496847886195916,
+   "auprc": 0.6420031256400665
+  },
+  "best_chain_no_hub": {
+   "auroc": 0.6607917469155813,
+   "auprc": 0.68117994818934
+  },
+  "best_chain_no_kinds": {
+   "auroc": 0.6604771076066436,
+   "auprc": 0.651191654195749
+  },
+  "best_chain_no_analogy": {
+   "auroc": 0.6496847886195916,
+   "auprc": 0.6420031256400665
+  },
+  "top5_mean": {
+   "auroc": 0.6602692549722546,
+   "auprc": 0.6575577925378266
+  },
+  "neg_shortest": {
+   "auroc": 0.6113136667874373,
+   "auprc": 0.5651471536965299
+  },
+  "spectral_blackbox": {
+   "auroc": 0.6210331610762571,
+   "auprc": 0.5861404857605288
+  },
+  "logreg_all_path_features": {
+   "auroc": 0.6704849259167445,
+   "auprc": 0.6744027887554522
+  }
+ },
+ "E1_n": {
+  "positives": 1145,
+  "negatives": 1145
+ },
+ "E2": {
+  "pairs": 300,
+  "connected_within_2": 0.17,
+  "connected_within_3": 0.73,
+  "median_chains_le3": 22.5,
+  "p90_chains_le3": 2015.6000000000035,
+  "positive_pairs_median_chains": 252.0,
+  "top_hubs": [
+   [
+    "brain",
+    "Anatomy",
+    15981
+   ],
+   [
+    "testis",
+    "Anatomy",
+    15519
+   ],
+   [
+    "adrenal gland",
+    "Anatomy",
+    14274
+   ],
+   [
+    "heart",
+    "Anatomy",
+    14015
+   ],
+   [
+    "lung",
+    "Anatomy",
+    13942
+   ]
+  ],
+  "top_chain_uses_top1pct_hub": {
+   "linkfinder": 0.10702341137123746,
+   "no_hub_penalty": 0.4682274247491639
+  }
+ },
+ "E3": {
+  "metformin ⇄ type 2 diabetes mellitus": {
+   "n_chains": 1038,
+   "linkfinder_top3": [
+    "Metformin [Compound] -binds- ND1 [Gene] -interacts- NAMPT [Gene] -associates- type 2 diabetes mellitus",
+    "Metformin [Compound] -binds- ND1 [Gene] -associates- type 2 diabetes mellitus",
+    "Metformin [Compound] -binds- NDUFAF3 [Gene] -regulates- THADA [Gene] -associates- type 2 diabetes mellitus"
+   ],
+   "no_hub_penalty_top3": [
+    "Metformin [Compound] -binds- PRKAB1 [Gene] -interacts- PSMD6 [Gene] -associates- type 2 diabetes mellitus",
+    "Metformin [Compound] -binds- PRKAB1 [Gene] -interacts- PRKAA1 [Gene] -associates- type 2 diabetes mellitus",
+    "Metformin [Compound] -binds- PRKAB1 [Gene] -interacts- MIF [Gene] -associates- type 2 diabetes mellitus"
+   ]
+  },
+  "tamoxifen ⇄ breast cancer": {
+   "n_chains": 9012,
+   "linkfinder_top3": [
+    "Tamoxifen [Compound] -binds- FMO3 [Gene] -covaries- SPRR1A [Gene] -associates- breast cancer",
+    "Tamoxifen [Compound] -binds- CYP19A1 [Gene] -expresses- corpus luteum [Anatomy] -localizes- breast cancer",
+    "Tamoxifen [Compound] -downregulates- URB2 [Gene] -interacts- LMNB1 [Gene] -upregulates- breast cancer"
+   ],
+   "no_hub_penalty_top3": [
+    "Tamoxifen [Compound] -binds- ESR1 [Gene] -associates- breast cancer",
+    "Tamoxifen [Compound] -binds- ESR1 [Gene] -interacts- CCND1 [Gene] -associates- breast cancer",
+    "Tamoxifen [Compound] -binds- ABCB1 [Gene] -associates- breast cancer"
+   ]
+  },
+  "methotrexate ⇄ rheumatoid arthritis": {
+   "n_chains": 3670,
+   "linkfinder_top3": [
+    "Methotrexate [Compound] -binds- SLCO1B3 [Gene] -covaries- PTPRCAP [Gene] -upregulates- rheumatoid arthritis",
+    "Methotrexate [Compound] -binds- SLCO3A1 [Gene] -covaries- MAB21L2 [Gene] -associates- rheumatoid arthritis",
+    "Methotrexate [Compound] -upregulates- PTPN6 [Gene] -interacts- FCRL3 [Gene] -associates- rheumatoid arthritis"
+   ],
+   "no_hub_penalty_top3": [
+    "Methotrexate [Compound] -binds- TYMS [Gene] -upregulates- rheumatoid arthritis",
+    "Methotrexate [Compound] -binds- MTHFR [Gene] -downregulates- rheumatoid arthritis",
+    "Methotrexate [Compound] -upregulates- TNIP1 [Gene] -interacts- TNFAIP3 [Gene] -associates- rheumatoid arthritis"
+   ]
+  },
+  "cisplatin ⇄ testicular cancer": {
+   "n_chains": 122,
+   "linkfinder_top3": [
+    "Cisplatin [Compound] -binds- ABCC5 [Gene] -regulates- STK11 [Gene] -associates- testicular cancer",
+    "Cisplatin [Compound] -binds- SOD1 [Gene] -regulates- STK10 [Gene] -associates- testicular cancer",
+    "Cisplatin [Compound] -binds- ABCB1 [Gene] -regulates- FGFR3 [Gene] -associates- testicular cancer"
+   ],
+   "no_hub_penalty_top3": [
+    "Cisplatin [Compound] -binds- SLC31A1 [Gene] -downregulates- testis [Anatomy] -localizes- testicular cancer",
+    "Cisplatin [Compound] -binds- SLC22A2 [Gene] -downregulates- female gonad [Anatomy] -localizes- testicular cancer",
+    "Cisplatin [Compound] -binds- MPO [Gene] -downregulates- female gonad [Anatomy] -localizes- testicular cancer"
+   ]
+  }
+ }
+}

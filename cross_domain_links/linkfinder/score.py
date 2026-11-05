@@ -26,7 +26,7 @@ def hop_evidence(edge) -> float:
     return EDGE_KINDS[edge.kind] * (1 - 0.5 ** n_sources)
 
 
-def score_chain(graph: EvidenceGraph, chain: Chain, w: float = 0.4,
+def score_chain(graph: EvidenceGraph, chain: Chain, w: float = 0.1,
                 domain_bonus: float = 0.1, length_decay: float = 0.9) -> Chain:
     spec = 1.0
     ev = 1.0
@@ -49,7 +49,7 @@ def score_chain(graph: EvidenceGraph, chain: Chain, w: float = 0.4,
 
 
 def rank(graph: EvidenceGraph, chains: list[Chain], top_k: int = 10,
-         w: float = 0.4, diversify: bool = True) -> list[Chain]:
+         w: float = 0.1, diversify: bool = True) -> list[Chain]:
     """Score and sort. With `diversify`, keep at most one chain per bridge set:
     two chains through the same intermediate concepts are one explanation."""
     scored = sorted((score_chain(graph, c, w) for c in chains),

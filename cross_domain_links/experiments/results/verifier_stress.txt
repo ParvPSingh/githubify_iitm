@@ -1,0 +1,4 @@
+31 edges
+correct  verifier says 'supported': 31/31 = 100%
+swapped  verifier says 'supported': 1/31 = 3%
+negated  verifier says 'supported': 31/31 = 100%

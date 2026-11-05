@@ -1,0 +1,374 @@
+{
+ "cancer ⇄ car": {
+  "n_chains": 206,
+  "top_by_linkfinder": [
+   "cancer → result_in_death → car_crash → car  [CapableOf, CapableOf, RelatedTo]",
+   "cancer → very_dangerous → firebomb → car  [HasProperty, HasProperty, AtLocation]",
+   "cancer → smoking → lighter → car  [Causes, HasPrerequisite, AtLocation]",
+   "cancer → smoking → driving → car  [Causes, HasSubevent, HasPrerequisite]",
+   "cancer → going_outside_for_evening → fun → car  [Causes, UsedFor, UsedFor]"
+  ],
+  "top_by_no_hub_penalty": [
+   "cancer → smoking → driving → car",
+   "cancer → kill → machine → car",
+   "cancer → going_outside_for_evening → fun → car",
+   "cancer → person → garage → car",
+   "cancer → smoking → lighter → car"
+  ],
+  "max_intermediate_degree_linkfinder": [
+   17,
+   36,
+   190,
+   367,
+   502
+  ],
+  "max_intermediate_degree_no_hub_penalty": [
+   367,
+   892,
+   502,
+   9681,
+   190
+  ]
+ },
+ "cancer ⇄ car (RelatedTo removed)": {
+  "n_chains": 51,
+  "top_by_linkfinder": [
+   "cancer → very_dangerous → firebomb → car  [HasProperty, HasProperty, AtLocation]",
+   "cancer → smoking → lighter → car  [Causes, HasPrerequisite, AtLocation]",
+   "cancer → smoking → driving → car  [Causes, HasSubevent, HasPrerequisite]",
+   "cancer → going_outside_for_evening → fun → car  [Causes, UsedFor, UsedFor]",
+   "cancer → going_outside_for_evening → having_fun → car  [Causes, UsedFor, UsedFor]"
+  ],
+  "top_by_no_hub_penalty": [
+   "cancer → smoking → driving → car",
+   "cancer → kill → machine → car",
+   "cancer → going_outside_for_evening → fun → car",
+   "cancer → person → garage → car",
+   "cancer → smoking → lighter → car"
+  ],
+  "max_intermediate_degree_linkfinder": [
+   36,
+   190,
+   367,
+   502,
+   277
+  ],
+  "max_intermediate_degree_no_hub_penalty": [
+   367,
+   892,
+   502,
+   9681,
+   190
+  ]
+ },
+ "cancer ⇄ chickenpox": {
+  "n_chains": 56,
+  "top_by_linkfinder": [
+   "cancer → thyroid_cancer → disease → chickenpox  [IsA, IsA, IsA]",
+   "cancer → testicular_cancer → disease → chickenpox  [IsA, IsA, IsA]",
+   "cancer → anal_cancer → disease → chickenpox  [IsA, IsA, IsA]",
+   "cancer → stomach_cancer → disease → chickenpox  [IsA, IsA, IsA]",
+   "cancer → death → south_park → chickenpox  [Causes, PartOf, PartOf]"
+  ],
+  "top_by_no_hub_penalty": [
+   "cancer → disease → chickenpox",
+   "cancer → death → south_park → chickenpox",
+   "cancer → death → television_episode → chickenpox",
+   "cancer → sunburn → disease → chickenpox",
+   "cancer → anal_cancer → disease → chickenpox"
+  ],
+  "max_intermediate_degree_linkfinder": [
+   2610,
+   2610,
+   2610,
+   2610,
+   671
+  ],
+  "max_intermediate_degree_no_hub_penalty": [
+   2610,
+   671,
+   671,
+   2610,
+   2610
+  ]
+ },
+ "cancer ⇄ chickenpox (RelatedTo removed)": {
+  "n_chains": 21,
+  "top_by_linkfinder": [
+   "cancer → thyroid_cancer → disease → chickenpox  [IsA, IsA, IsA]",
+   "cancer → testicular_cancer → disease → chickenpox  [IsA, IsA, IsA]",
+   "cancer → anal_cancer → disease → chickenpox  [IsA, IsA, IsA]",
+   "cancer → stomach_cancer → disease → chickenpox  [IsA, IsA, IsA]",
+   "cancer → death → south_park → chickenpox  [Causes, PartOf, PartOf]"
+  ],
+  "top_by_no_hub_penalty": [
+   "cancer → disease → chickenpox",
+   "cancer → death → south_park → chickenpox",
+   "cancer → death → television_episode → chickenpox",
+   "cancer → sunburn → disease → chickenpox",
+   "cancer → lymphoma → disease → chickenpox"
+  ],
+  "max_intermediate_degree_linkfinder": [
+   2610,
+   2610,
+   2610,
+   2610,
+   671
+  ],
+  "max_intermediate_degree_no_hub_penalty": [
+   2610,
+   671,
+   671,
+   2610,
+   2610
+  ]
+ },
+ "music ⇄ mathematics": {
+  "n_chains": 5000,
+  "top_by_linkfinder": [
+   "music → riemannian → riemann → mathematics  [HasContext, RelatedTo, HasContext]",
+   "music → polymodality → multimodality → mathematics  [HasContext, RelatedTo, HasContext]",
+   "music → supersaw → sawtooth_wave → mathematics  [HasContext, RelatedTo, HasContext]",
+   "music → anthemwise → alternately → mathematics  [HasContext, RelatedTo, HasContext]",
+   "music → octaviate → octavate → mathematics  [HasContext, RelatedTo, HasContext]"
+  ],
+  "top_by_no_hub_penalty": [
+   "music → instrument → triangle → mathematics",
+   "music → musical_instrument → triangle → mathematics",
+   "music → figure → triangle → mathematics",
+   "music → triangle → geometry → mathematics",
+   "music → triangle → mathematics"
+  ],
+  "max_intermediate_degree_linkfinder": [
+   8,
+   8,
+   8,
+   18,
+   20
+  ],
+  "max_intermediate_degree_no_hub_penalty": [
+   1032,
+   619,
+   366,
+   925,
+   212
+  ]
+ },
+ "music ⇄ mathematics (RelatedTo removed)": {
+  "n_chains": 819,
+  "top_by_linkfinder": [
+   "music → pyrotechnics → gerbe → mathematics  [HasContext, HasContext, HasContext]",
+   "music → progression → harmonic_progression → mathematics  [HasContext, IsA, HasContext]",
+   "music → progression → geometric_progression → mathematics  [HasContext, IsA, HasContext]",
+   "music → progression → arithmetic_progression → mathematics  [HasContext, IsA, HasContext]",
+   "music → polymodality → mathematics  [HasContext, HasContext]"
+  ],
+  "top_by_no_hub_penalty": [
+   "music → instrument → triangle → mathematics",
+   "music → musical_instrument → triangle → mathematics",
+   "music → subject → geometry → mathematics",
+   "music → triangle → geometry → mathematics",
+   "music → figure → triangle → mathematics"
+  ],
+  "max_intermediate_degree_linkfinder": [
+   29,
+   42,
+   42,
+   42,
+   4
+  ],
+  "max_intermediate_degree_no_hub_penalty": [
+   1032,
+   619,
+   925,
+   925,
+   366
+  ]
+ },
+ "spider ⇄ bridge": {
+  "n_chains": 469,
+  "top_by_linkfinder": [
+   "spider → snooker → chinese_snooker → bridge  [HasContext, HasContext, RelatedTo]",
+   "spider → heroin → druggies → bridge  [RelatedTo, RelatedTo, AtLocation]",
+   "spider → catch_flies → mouth → bridge  [CapableOf, RelatedTo, AtLocation]",
+   "spider → cue_ball → chinese_snooker → bridge  [RelatedTo, RelatedTo, RelatedTo]",
+   "spider → resonator → sounding_board → bridge  [RelatedTo, IsA, RelatedTo]"
+  ],
+  "top_by_no_hub_penalty": [
+   "spider → music → rock → bridge",
+   "spider → animal → fish → bridge",
+   "spider → music → guitar → bridge",
+   "spider → cooking → water → bridge",
+   "spider → internet → connection → bridge"
+  ],
+  "max_intermediate_degree_linkfinder": [
+   111,
+   91,
+   622,
+   48,
+   34
+  ],
+  "max_intermediate_degree_no_hub_penalty": [
+   3729,
+   2448,
+   3729,
+   2363,
+   1870
+  ]
+ },
+ "spider ⇄ bridge (RelatedTo removed)": {
+  "n_chains": 107,
+  "top_by_linkfinder": [
+   "spider → billiards → bridge  [HasContext, HasContext]",
+   "spider → mail_box → air → bridge  [AtLocation, AtLocation, AtLocation]",
+   "spider → music → middle_eight → bridge  [HasContext, HasContext, IsA]",
+   "spider → snooker → bridge  [HasContext, HasContext]",
+   "spider → new_zealand → bum → bridge  [HasContext, HasContext, AtLocation]"
+  ],
+  "top_by_no_hub_penalty": [
+   "spider → music → rock → bridge",
+   "spider → animal → fish → bridge",
+   "spider → music → guitar → bridge",
+   "spider → cooking → water → bridge",
+   "spider → internet → connection → bridge"
+  ],
+  "max_intermediate_degree_linkfinder": [
+   98,
+   800,
+   3729,
+   111,
+   872
+  ],
+  "max_intermediate_degree_no_hub_penalty": [
+   3729,
+   2448,
+   3729,
+   2363,
+   1870
+  ]
+ },
+ "bird ⇄ airplane": {
+  "n_chains": 718,
+  "top_by_linkfinder": [
+   "bird → travel_across_world → airplane  [CapableOf, CapableOf]",
+   "bird → two_wings → airplanes → airplane  [HasA, HasA, RelatedTo]",
+   "bird → plane → arrive_at_airport → airplane  [RelatedTo, CapableOf, CapableOf]",
+   "bird → wings → flying → airplane  [HasA, UsedFor, UsedFor]",
+   "bird → red_eyed_vireo → red_eye → airplane  [IsA, RelatedTo, RelatedTo]"
+  ],
+  "top_by_no_hub_penalty": [
+   "bird → sky → airplane",
+   "bird → air → airplane",
+   "bird → owl → air → airplane",
+   "bird → fly → airplane",
+   "bird → sky → air → airplane"
+  ],
+  "max_intermediate_degree_linkfinder": [
+   3,
+   52,
+   524,
+   88,
+   39
+  ],
+  "max_intermediate_degree_no_hub_penalty": [
+   384,
+   800,
+   800,
+   833,
+   800
+  ]
+ },
+ "bird ⇄ airplane (RelatedTo removed)": {
+  "n_chains": 107,
+  "top_by_linkfinder": [
+   "bird → travel_across_world → airplane  [CapableOf, CapableOf]",
+   "bird → wings → flying → airplane  [HasA, UsedFor, UsedFor]",
+   "bird → tweety → fly → airplane  [IsA, CapableOf, UsedFor]",
+   "bird → rook → flying → airplane  [IsA, UsedFor, UsedFor]",
+   "bird → wings → airplane  [HasA, AtLocation]"
+  ],
+  "top_by_no_hub_penalty": [
+   "bird → sky → airplane",
+   "bird → air → airplane",
+   "bird → owl → air → airplane",
+   "bird → fly → airplane",
+   "bird → sky → air → airplane"
+  ],
+  "max_intermediate_degree_linkfinder": [
+   3,
+   88,
+   833,
+   88,
+   74
+  ],
+  "max_intermediate_degree_no_hub_penalty": [
+   384,
+   800,
+   800,
+   833,
+   800
+  ]
+ },
+ "coffee ⇄ sleep": {
+  "n_chains": 326,
+  "top_by_linkfinder": [
+   "coffee → caffine → going_into_trance → sleep  [HasA, HasPrerequisite, HasSubevent]",
+   "coffee → waking_up_in_morning → having_dream → sleep  [HasPrerequisite, HasSubevent, HasSubevent]",
+   "coffee → waking → snoring → sleep  [RelatedTo, Causes, HasPrerequisite]",
+   "coffee → insomnia → going_to_bed → sleep  [Causes, Causes, Causes]",
+   "coffee → waking_up → snoring → sleep  [RelatedTo, Causes, HasPrerequisite]"
+  ],
+  "top_by_no_hub_penalty": [
+   "coffee → insomnia → going_to_bed → sleep",
+   "coffee → work → gather_energy_for_tomorrow → sleep",
+   "coffee → shelf → book → sleep",
+   "coffee → friend's_house → room → sleep",
+   "coffee → office → working → sleep"
+  ],
+  "max_intermediate_degree_linkfinder": [
+   77,
+   117,
+   88,
+   78,
+   88
+  ],
+  "max_intermediate_degree_no_hub_penalty": [
+   78,
+   1258,
+   1647,
+   690,
+   710
+  ]
+ },
+ "coffee ⇄ sleep (RelatedTo removed)": {
+  "n_chains": 52,
+  "top_by_linkfinder": [
+   "coffee → caffine → going_into_trance → sleep  [HasA, HasPrerequisite, HasSubevent]",
+   "coffee → waking_up_in_morning → having_dream → sleep  [HasPrerequisite, HasSubevent, HasSubevent]",
+   "coffee → insomnia → going_to_bed → sleep  [Causes, Causes, Causes]",
+   "coffee → begin_work → waking_up → sleep  [HasFirstSubevent, CausesDesire, HasSubevent]",
+   "coffee → awaking → tiredness → sleep  [HasPrerequisite, Causes, CausesDesire]"
+  ],
+  "top_by_no_hub_penalty": [
+   "coffee → insomnia → going_to_bed → sleep",
+   "coffee → work → gather_energy_for_tomorrow → sleep",
+   "coffee → shelf → book → sleep",
+   "coffee → friend's_house → room → sleep",
+   "coffee → office → working → sleep"
+  ],
+  "max_intermediate_degree_linkfinder": [
+   77,
+   117,
+   78,
+   84,
+   62
+  ],
+  "max_intermediate_degree_no_hub_penalty": [
+   78,
+   1258,
+   1647,
+   690,
+   710
+  ]
+ }
+}
